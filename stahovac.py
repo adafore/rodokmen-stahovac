@@ -8,6 +8,8 @@ Použití:
   py stahovac.py --url "<START_URL>" --stran 10
 """
 
+from __future__ import annotations
+
 import argparse
 import hashlib
 import json

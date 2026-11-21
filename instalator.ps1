@@ -57,34 +57,74 @@ try {
     if (-not $gitExe) { throw "Git se nepodarilo najit ani po instalaci. Zkus zavrit okno a spustit instalator znovu." }
     Write-Host "    OK: $gitExe"
 
-    # 2. Python 3.12 (64-bit, aby mel Playwright/greenlet predpřipravene binarni balicky bez C++ kompilatoru)
-    Write-Host "[2/6] Kontroluji Python 3.12 (64-bit)..." -ForegroundColor Green
+    # 2. Python (64-bit Python 3.12 na 64bit Win; 32-bit Python 3.9 na 32bit Win kvuli binarnimu greenletu)
+    $is64Win = [Environment]::Is64BitOperatingSystem
+    Write-Host ("[2/6] Architektura Windows: " + $(if ($is64Win) { "64-bit" } else { "32-bit" })) -ForegroundColor Green
+
+    function Get-PyInfo($exe) {
+        if (-not $exe -or -not (Test-Path $exe)) { return $null }
+        try {
+            $out = & $exe -c "import sys, struct; print(f'{sys.version_info.major}.{sys.version_info.minor}:{struct.calcsize(\"P\")*8}')" 2>$null
+            if ($out) { return $out.Trim() }
+        } catch {}
+        return $null
+    }
+
     $pyExe = $null
-    $kandidatiPy = @(
-        "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
-        "C:\Program Files\Python312\python.exe",
-        "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe",
-        "C:\Program Files\Python311\python.exe"
-    )
-    foreach ($kp in $kandidatiPy) {
-        if (Test-Path $kp) { $pyExe = $kp; break }
-    }
-    if (-not $pyExe) {
-        Install-Winget 'Python.Python.3.12' 'Python 3.12 (64-bit)'
+    $targetPyVer = if ($is64Win) { '3.12' } else { '3.9' }
+    $targetBits  = if ($is64Win) { '64' } else { '32' }
+
+    if ($is64Win) {
+        $kandidatiPy = @(
+            "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
+            "C:\Program Files\Python312\python.exe",
+            "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe",
+            "C:\Program Files\Python311\python.exe"
+        )
         foreach ($kp in $kandidatiPy) {
-            if (Test-Path $kp) { $pyExe = $kp; break }
+            $info = Get-PyInfo $kp
+            if ($info -eq '3.12:64' -or $info -eq '3.11:64') { $pyExe = $kp; break }
+        }
+        if (-not $pyExe) {
+            Write-Host "    Stahuji a instaluji 64-bit Python 3.12.10 (bez C++ kompilatoru)..." -ForegroundColor Yellow
+            $pyInst = "$env:TEMP\python-3.12.10-amd64.exe"
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+            Invoke-WebRequest -UseBasicParsing 'https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe' -OutFile $pyInst
+            $p = Start-Process -FilePath $pyInst -ArgumentList '/quiet','InstallAllUsers=0','PrependPath=1','Include_test=0' -Wait -PassThru
+            Refresh-Path
+            foreach ($kp in $kandidatiPy) {
+                $info = Get-PyInfo $kp
+                if ($info -eq '3.12:64') { $pyExe = $kp; break }
+            }
+        }
+    } else {
+        $kandidatiPy = @(
+            "$env:LOCALAPPDATA\Programs\Python\Python39-32\python.exe",
+            "$env:LOCALAPPDATA\Programs\Python\Python39\python.exe",
+            "C:\Program Files\Python39\python.exe",
+            "C:\Python39\python.exe"
+        )
+        foreach ($kp in $kandidatiPy) {
+            $info = Get-PyInfo $kp
+            if ($info -eq '3.9:32') { $pyExe = $kp; break }
+        }
+        if (-not $pyExe) {
+            Write-Host "    Stahuji a instaluji 32-bit Python 3.9.13 (s hotovym balickem greenlet pro 32bit Win)..." -ForegroundColor Yellow
+            $pyInst = "$env:TEMP\python-3.9.13.exe"
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+            Invoke-WebRequest -UseBasicParsing 'https://www.python.org/ftp/python/3.9.13/python-3.9.13.exe' -OutFile $pyInst
+            $p = Start-Process -FilePath $pyInst -ArgumentList '/quiet','InstallAllUsers=0','PrependPath=1','Include_test=0' -Wait -PassThru
+            Refresh-Path
+            foreach ($kp in $kandidatiPy) {
+                $info = Get-PyInfo $kp
+                if ($info -eq '3.9:32') { $pyExe = $kp; break }
+            }
         }
     }
-    if (-not $pyExe) {
-        # Zalozni pokus pres py -3.12
-        $pyLauncher = Find-Tool 'py' @('C:\Windows\py.exe')
-        if ($pyLauncher) {
-            $detected = & $pyLauncher -3.12 -c "import sys; print(sys.executable)" 2>$null
-            if ($detected -and (Test-Path $detected)) { $pyExe = $detected.Trim() }
-        }
-    }
-    if (-not $pyExe) { throw "Python 3.12 se nepodarilo najit ani po instalaci. Zkus instalator spustit jeste jednou." }
-    Write-Host "    OK: $pyExe"
+
+    if (-not $pyExe) { throw "Nepodarilo se najit spravny Python ($targetPyVer ${targetBits}-bit) ani po instalaci." }
+    $pyInfo = Get-PyInfo $pyExe
+    Write-Host "    OK: $pyExe ($pyInfo)"
 
     # 3. GitHub CLI (gh)
     Write-Host "[3/6] Kontroluji GitHub CLI (gh)..." -ForegroundColor Green
@@ -137,14 +177,14 @@ try {
 
     # 6. Virtualni prostredi + Playwright + Chromium
     Write-Host ""
-    Write-Host "[6/6] Nastavuji Python 3.12 .venv a instaluji Playwright + Chromium..." -ForegroundColor Green
+    Write-Host "[6/6] Nastavuji Python .venv ($pyInfo) a instaluji Playwright + Chromium..." -ForegroundColor Green
     Push-Location $InstallDir
     $venvPy = Join-Path $InstallDir '.venv\Scripts\python.exe'
-    # Pokud existuje stare .venv z jine verze Pythonu (napr. 3.13/3.14), smazeme ho a vytvorime ciste z 3.12
+    # Pokud existuje stare .venv z jine verze nebo bitove architektury, smazeme ho
     if (Test-Path $venvPy) {
-        $vVer = & $venvPy -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')" 2>$null
-        if ($vVer -ne '3.12' -and $vVer -ne '3.11') {
-            Write-Host "    Odstranuji stare .venv (Python $vVer) a vytvarim ciste s Pythonem 3.12..." -ForegroundColor Yellow
+        $vInfo = Get-PyInfo $venvPy
+        if ($vInfo -ne $pyInfo) {
+            Write-Host "    Odstranuji stare .venv ($vInfo) a vytvarim ciste ($pyInfo)..." -ForegroundColor Yellow
             Remove-Item -Recurse -Force (Join-Path $InstallDir '.venv')
         }
     }
@@ -153,8 +193,12 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Nepodarilo se vytvorit .venv." }
     }
     & $venvPy -m pip install --upgrade pip -q
-    & $venvPy -m pip install --only-binary=:all: -r requirements.txt
-    if ($LASTEXITCODE -ne 0) { throw "Instalace requirements.txt selhala." }
+    if ($is64Win) {
+        & $venvPy -m pip install --only-binary=:all: -r requirements.txt
+    } else {
+        & $venvPy -m pip install --only-binary=:all: "playwright==1.49.1"
+    }
+    if ($LASTEXITCODE -ne 0) { throw "Instalace Playwrightu selhala." }
     & $venvPy -m playwright install chromium
     if ($LASTEXITCODE -ne 0) { throw "Instalace Playwright Chromium selhala." }
     Pop-Location

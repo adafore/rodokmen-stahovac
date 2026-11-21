@@ -11,6 +11,8 @@ Co dělá při každém spuštění (i průběžně mezi bloky):
    hned stáhnout a analyzovat) a odešle průběh v knihy_k_badani.json na GitHub.
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
