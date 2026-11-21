@@ -64,8 +64,8 @@ try {
     function Get-PyInfo($exe) {
         if (-not $exe -or -not (Test-Path $exe)) { return $null }
         try {
-            $out = & $exe -c "import sys, struct; print(f'{sys.version_info.major}.{sys.version_info.minor}:{struct.calcsize(\"P\")*8}')" 2>$null
-            if ($out) { return $out.Trim() }
+            $out = & $exe -c 'import sys, struct; print("%d.%d:%d" % (sys.version_info.major, sys.version_info.minor, struct.calcsize("P")*8))' 2>$null
+            if ($out) { return ($out | Out-String).Trim() }
         } catch {}
         return $null
     }
@@ -199,8 +199,18 @@ try {
         & $venvPy -m pip install --only-binary=:all: "playwright==1.49.1"
     }
     if ($LASTEXITCODE -ne 0) { throw "Instalace Playwrightu selhala." }
+    $ErrorActionPreference = 'Continue'
     & $venvPy -m playwright install chromium
-    if ($LASTEXITCODE -ne 0) { throw "Instalace Playwright Chromium selhala." }
+    $pwChromeCode = $LASTEXITCODE
+    $ErrorActionPreference = 'Stop'
+    if ($pwChromeCode -ne 0) {
+        $sysChrome = @('C:\Program Files\Google\Chrome\Application\chrome.exe', 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe') | Where-Object { Test-Path $_ } | Select-Object -First 1
+        if ($sysChrome) {
+            Write-Host "    [i] Playwright Chromium nepodporuje 32-bit – pouzije se nainstalovany Google Chrome ($sysChrome)." -ForegroundColor Yellow
+        } else {
+            throw "Instalace Playwright Chromium selhala a Google Chrome nebyl nalezen."
+        }
+    }
     Pop-Location
 
     # Vytvoreni zastupce na Plose

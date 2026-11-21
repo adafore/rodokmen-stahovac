@@ -288,12 +288,22 @@ def spusti_stahovani(
         print(f"[i] Kniha {kniha_polozka['kniha']} – rozlišení: {'DETAIL 1600x900 (1.5x)' if use_detail else 'ÚSPORNÝ REJSTŘÍK 1200x750 (1.0x)'}")
 
         with sync_playwright() as p:
-            context = p.chromium.launch_persistent_context(
-                user_data_dir=str(profil_dir),
-                headless=False,
-                viewport=viewport_cfg,
-                device_scale_factor=dpr_cfg,
-            )
+            try:
+                context = p.chromium.launch_persistent_context(
+                    user_data_dir=str(profil_dir),
+                    headless=False,
+                    viewport=viewport_cfg,
+                    device_scale_factor=dpr_cfg,
+                )
+            except Exception:
+                print("  [i] Používám nainstalovaný Google Chrome (fallback pro 32bit Windows)…")
+                context = p.chromium.launch_persistent_context(
+                    user_data_dir=str(profil_dir),
+                    channel="chrome",
+                    headless=False,
+                    viewport=viewport_cfg,
+                    device_scale_factor=dpr_cfg,
+                )
             try:
                 page = context.pages[0] if context.pages else context.new_page()
                 kniha_id = kniha_polozka["kniha"]
