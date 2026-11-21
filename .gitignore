@@ -1,0 +1,6 @@
+.venv/
+profil_prohlizece/
+skeny/
+__pycache__/
+*.pyc
+*.zip
