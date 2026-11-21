@@ -193,24 +193,8 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Nepodarilo se vytvorit .venv." }
     }
     & $venvPy -m pip install --upgrade pip -q
-    if ($is64Win) {
-        & $venvPy -m pip install --only-binary=:all: -r requirements.txt
-    } else {
-        & $venvPy -m pip install --only-binary=:all: "playwright==1.49.1"
-    }
-    if ($LASTEXITCODE -ne 0) { throw "Instalace Playwrightu selhala." }
-    $ErrorActionPreference = 'Continue'
-    & $venvPy -m playwright install chromium
-    $pwChromeCode = $LASTEXITCODE
-    $ErrorActionPreference = 'Stop'
-    if ($pwChromeCode -ne 0) {
-        $sysChrome = @('C:\Program Files\Google\Chrome\Application\chrome.exe', 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe') | Where-Object { Test-Path $_ } | Select-Object -First 1
-        if ($sysChrome) {
-            Write-Host "    [i] Playwright Chromium nepodporuje 32-bit – pouzije se nainstalovany Google Chrome ($sysChrome)." -ForegroundColor Yellow
-        } else {
-            throw "Instalace Playwright Chromium selhala a Google Chrome nebyl nalezen."
-        }
-    }
+    & $venvPy -m pip install -r requirements.txt
+    if ($LASTEXITCODE -ne 0) { throw "Instalace requirements.txt (websocket-client) selhala." }
     Pop-Location
 
     # Vytvoreni zastupce na Plose

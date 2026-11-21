@@ -210,6 +210,13 @@ def main() -> None:
             print("[↻] Spouštím novou verzi spustit.py…")
             os.execv(sys.executable, [sys.executable, str(BASE_DIR / "spustit.py"), *sys.argv[1:]])
 
+    # Ujistíme se, že máme nainstalované závislosti (např. po přechodu na v2.0.0 websocket-client)
+    try:
+        import websocket  # noqa: F401
+    except ImportError:
+        print("[📦] Doinstalovávám requirements.txt (websocket-client)…")
+        _run([sys.executable, "-m", "pip", "install", "-q", "-r", str(REQ_TXT)], capture=False)
+
     # Pokud z minulého běhu zůstaly neodeslané snímky, nejdřív je odešleme
     nahraj_stazene_obrazky(odeslat_stav_git=True)
 
@@ -232,6 +239,7 @@ def main() -> None:
     deadline = None if celkem_minut <= 0 else (start + celkem_minut * 60.0)
     celkem_nahrano = 0
     blok_c = 0
+    chyby_za_sebou = 0
 
     try:
         while True:
@@ -257,10 +265,19 @@ def main() -> None:
 
             blok_c += 1
             print(f"\n--- Blok #{blok_c} ({delka_bloku:.1f} min) ---")
-            subprocess.run(
+            res = subprocess.run(
                 [sys.executable, str(BASE_DIR / "stahovac.py"), "--minut", f"{delka_bloku:.2f}"],
                 cwd=str(BASE_DIR),
             )
+            if res.returncode != 0:
+                chyby_za_sebou += 1
+                print(f"[!] stahovac.py skončil s chybou (kód {res.returncode}, pokus {chyby_za_sebou}/2).")
+                if chyby_za_sebou >= 2:
+                    print("[✕] Zastavuji smyčku po 2 chybách za sebou, aby se program nezacyklil.")
+                    break
+                time.sleep(5)
+            else:
+                chyby_za_sebou = 0
 
             celkem_nahrano += nahraj_stazene_obrazky(odeslat_stav_git=True)
 
