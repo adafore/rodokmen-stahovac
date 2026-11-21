@@ -64,7 +64,7 @@ try {
     function Get-PyInfo($exe) {
         if (-not $exe -or -not (Test-Path $exe)) { return $null }
         try {
-            $out = & $exe -c 'import sys, struct; print("%d.%d:%d" % (sys.version_info.major, sys.version_info.minor, struct.calcsize("P")*8))' 2>$null
+            $out = & $exe -c 'import sys, struct; print(str(sys.version_info[0])+chr(46)+str(sys.version_info[1])+chr(58)+str(struct.calcsize(chr(80))*8))' 2>$null
             if ($out) { return ($out | Out-String).Trim() }
         } catch {}
         return $null
