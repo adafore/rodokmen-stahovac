@@ -195,6 +195,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Samoaktualizační spouštěč stahovače matrik.")
     parser.add_argument("--minut", type=float, default=None, help="Celkový čas běhu v minutách (0 = dokud není vše hotovo)")
     parser.add_argument("--blok", type=float, default=BLOK_MINUT, help="Délka jednoho bloku před uploadem na GitHub (výchozí 20 min)")
+    parser.add_argument("--auto", action="store_true", help="Plně automatický režim (bez dotazu; po dokončení čeká a každých 10 min kontroluje GitHub)")
     parser.add_argument("--bez-aktualizace", action="store_true", help="Přeskočit kontrolu aktualizace na GitHubu")
     args = parser.parse_args()
 
@@ -211,7 +212,9 @@ def main() -> None:
     nahraj_stazene_obrazky(odeslat_stav_git=True)
 
     celkem_minut = args.minut
-    if celkem_minut is None:
+    if args.auto and celkem_minut is None:
+        celkem_minut = 0.0
+    elif celkem_minut is None:
         zbyva = _pocet_nedokoncenych()
         print(f"\nNedokončených bloků v zadání: {zbyva}")
         vstup = input("Kolik minut má stahovač běžet? [Enter = 600 (10 hodin), 0 = dokud není vše hotovo]: ").strip()
@@ -231,6 +234,13 @@ def main() -> None:
     try:
         while True:
             if _pocet_nedokoncenych() == 0:
+                if args.auto:
+                    print("\n[💤] Všechna aktuální zadání jsou hotová. Čekám 10 minut a pak znovu zkontroluji GitHub…")
+                    time.sleep(600)
+                    if not args.bez_aktualizace:
+                        if zkontroluj_aktualizaci():
+                            os.execv(sys.executable, [sys.executable, str(BASE_DIR / "spustit.py"), *sys.argv[1:]])
+                    continue
                 print("\n[✓] Všechna zadání v knihy_k_badani.json jsou hotová!")
                 break
 

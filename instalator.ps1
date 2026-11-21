@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 function Refresh-Path {
@@ -57,29 +57,33 @@ try {
     if (-not $gitExe) { throw "Git se nepodarilo najit ani po instalaci. Zkus zavrit okno a spustit instalator znovu." }
     Write-Host "    OK: $gitExe"
 
-    # 2. Python
-    Write-Host "[2/6] Kontroluji Python..." -ForegroundColor Green
-    $pyExe = Find-Tool 'py' @('C:\Windows\py.exe')
-    if (-not $pyExe) {
-        $pyExe = Find-Tool 'python' @(
-            "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
-            "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe",
-            "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe"
-        )
+    # 2. Python 3.12 (64-bit, aby mel Playwright/greenlet predpřipravene binarni balicky bez C++ kompilatoru)
+    Write-Host "[2/6] Kontroluji Python 3.12 (64-bit)..." -ForegroundColor Green
+    $pyExe = $null
+    $kandidatiPy = @(
+        "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
+        "C:\Program Files\Python312\python.exe",
+        "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe",
+        "C:\Program Files\Python311\python.exe"
+    )
+    foreach ($kp in $kandidatiPy) {
+        if (Test-Path $kp) { $pyExe = $kp; break }
     }
-    # Ignoruj prazdny Microsoft Store alias
-    if ($pyExe -and $pyExe -like '*WindowsApps*') { $pyExe = $null }
     if (-not $pyExe) {
-        Install-Winget 'Python.Python.3.12' 'Python 3.12'
-        $pyExe = Find-Tool 'py' @('C:\Windows\py.exe')
-        if (-not $pyExe) {
-            $pyExe = Find-Tool 'python' @(
-                "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
-                "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe"
-            )
+        Install-Winget 'Python.Python.3.12' 'Python 3.12 (64-bit)'
+        foreach ($kp in $kandidatiPy) {
+            if (Test-Path $kp) { $pyExe = $kp; break }
         }
     }
-    if (-not $pyExe) { throw "Python se nepodarilo najit ani po instalaci. Zkus instalator spustit jeste jednou." }
+    if (-not $pyExe) {
+        # Zalozni pokus pres py -3.12
+        $pyLauncher = Find-Tool 'py' @('C:\Windows\py.exe')
+        if ($pyLauncher) {
+            $detected = & $pyLauncher -3.12 -c "import sys; print(sys.executable)" 2>$null
+            if ($detected -and (Test-Path $detected)) { $pyExe = $detected.Trim() }
+        }
+    }
+    if (-not $pyExe) { throw "Python 3.12 se nepodarilo najit ani po instalaci. Zkus instalator spustit jeste jednou." }
     Write-Host "    OK: $pyExe"
 
     # 3. GitHub CLI (gh)
@@ -133,15 +137,23 @@ try {
 
     # 6. Virtualni prostredi + Playwright + Chromium
     Write-Host ""
-    Write-Host "[6/6] Nastavuji Python .venv a instaluji Playwright + Chromium..." -ForegroundColor Green
+    Write-Host "[6/6] Nastavuji Python 3.12 .venv a instaluji Playwright + Chromium..." -ForegroundColor Green
     Push-Location $InstallDir
     $venvPy = Join-Path $InstallDir '.venv\Scripts\python.exe'
+    # Pokud existuje stare .venv z jine verze Pythonu (napr. 3.13/3.14), smazeme ho a vytvorime ciste z 3.12
+    if (Test-Path $venvPy) {
+        $vVer = & $venvPy -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')" 2>$null
+        if ($vVer -ne '3.12' -and $vVer -ne '3.11') {
+            Write-Host "    Odstranuji stare .venv (Python $vVer) a vytvarim ciste s Pythonem 3.12..." -ForegroundColor Yellow
+            Remove-Item -Recurse -Force (Join-Path $InstallDir '.venv')
+        }
+    }
     if (-not (Test-Path $venvPy)) {
         & $pyExe -m venv .venv
         if ($LASTEXITCODE -ne 0) { throw "Nepodarilo se vytvorit .venv." }
     }
     & $venvPy -m pip install --upgrade pip -q
-    & $venvPy -m pip install -r requirements.txt
+    & $venvPy -m pip install --only-binary=:all: -r requirements.txt
     if ($LASTEXITCODE -ne 0) { throw "Instalace requirements.txt selhala." }
     & $venvPy -m playwright install chromium
     if ($LASTEXITCODE -ne 0) { throw "Instalace Playwright Chromium selhala." }
@@ -160,17 +172,33 @@ pause
 "@
     [System.IO.File]::WriteAllText($launcher, $launcherContent, [System.Text.UTF8Encoding]::new($false))
 
+    # Automaticke spusteni ihned po zapnuti mini PC (slozka Po spusteni / Startup)
+    $startupDir = [Environment]::GetFolderPath('Startup')
+    $autostartBat = Join-Path $startupDir 'Rodokmen_Stahovac_AutoStart.bat'
+    $autostartContent = @"
+@echo off
+chcp 65001 >nul
+title Rodokmen Stahovac AUTO (adafore)
+echo Cekam 15 sekund na pripojeni site po startu Windows...
+timeout /t 15 /nobreak >nul
+cd /d "C:\RodokmenStahovac"
+"C:\RodokmenStahovac\.venv\Scripts\python.exe" spustit.py --auto
+pause
+"@
+    [System.IO.File]::WriteAllText($autostartBat, $autostartContent, [System.Text.UTF8Encoding]::new($false))
+
     Write-Host ""
     Write-Host "============================================================" -ForegroundColor Cyan
     Write-Host "  HOTOVO! VSE JE USPESNE NAINSTALOVANO!" -ForegroundColor Green
     Write-Host "============================================================" -ForegroundColor Cyan
-    Write-Host "  Slozka programu:   $InstallDir"
-    Write-Host "  Spoustec na Plose: $launcher"
+    Write-Host "  Slozka programu:    $InstallDir"
+    Write-Host "  Spoustec na Plose:  $launcher"
+    Write-Host "  Auto-start po boot: $autostartBat"
     Write-Host ""
-    $ans = Read-Host "Chces stahovac rovnou ted spustit? (A/N)"
+    $ans = Read-Host "Chces stahovac rovnou ted spustit v automatickem rezimu? (A/N)"
     if ($ans -match '^[AaYy]') {
         Push-Location $InstallDir
-        & $venvPy spustit.py
+        & $venvPy spustit.py --auto
         Pop-Location
     }
 }
