@@ -153,9 +153,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00730.jp2",
       "od_snimku": 73,
       "do_snimku": 115,
-      "aktualni_snimek": 98,
+      "aktualni_snimek": 116,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3055_hd_sn1_60",
@@ -165,7 +165,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2981?image=216000010-000253-003370-000000-003055-000000-FM-B09379-00010.jp2",
       "od_snimku": 1,
       "do_snimku": 60,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 32,
       "detail": true,
       "hotovo": false
     },
