@@ -9,9 +9,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00510.jp2",
       "od_snimku": 51,
       "do_snimku": 53,
-      "aktualni_snimek": 53,
+      "aktualni_snimek": 54,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3057_hd_sn70",
@@ -21,9 +21,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00700.jp2",
       "od_snimku": 70,
       "do_snimku": 70,
-      "aktualni_snimek": 70,
+      "aktualni_snimek": 71,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5182_hd_sn58",
@@ -33,9 +33,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4934?image=216000010-000253-003372-000000-005182-000000-FM-B10035-00580.jp2",
       "od_snimku": 58,
       "do_snimku": 58,
-      "aktualni_snimek": 58,
+      "aktualni_snimek": 59,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3055_hd_sn62_65",
@@ -45,9 +45,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2981?image=216000010-000253-003370-000000-003055-000000-FM-B09379-00620.jp2",
       "od_snimku": 62,
       "do_snimku": 65,
-      "aktualni_snimek": 62,
+      "aktualni_snimek": 66,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3057_hd_sn9_15",
@@ -57,9 +57,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00080.jp2",
       "od_snimku": 8,
       "do_snimku": 16,
-      "aktualni_snimek": 8,
+      "aktualni_snimek": 17,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3057_hd_sn56_60",
@@ -69,9 +69,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00560.jp2",
       "od_snimku": 56,
       "do_snimku": 60,
-      "aktualni_snimek": 56,
+      "aktualni_snimek": 61,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3438_hd_sn15_45",
@@ -81,7 +81,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/256?image=216000010-000253-003370-000000-003438-000000-FM-B09548-00150.jp2",
       "od_snimku": 15,
       "do_snimku": 45,
-      "aktualni_snimek": 15,
+      "aktualni_snimek": 25,
       "detail": true,
       "hotovo": false
     },
