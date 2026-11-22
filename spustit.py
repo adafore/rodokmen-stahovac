@@ -226,15 +226,16 @@ def main() -> None:
     elif celkem_minut is None:
         zbyva = _pocet_nedokoncenych()
         print(f"\nNedokončených bloků v zadání: {zbyva}")
-        vstup = input("Kolik minut má stahovač běžet? [Enter = 600 (10 hodin), 0 = dokud není vše hotovo]: ").strip()
+        vstup = input("Kolik minut má stahovač běžet? [Enter nebo 0 = NEKONEČNÝ režim (hlídá GitHub stále), jinak číslo minut]: ").strip()
         if not vstup:
-            celkem_minut = 600.0
+            celkem_minut = 0.0
         else:
             try:
                 celkem_minut = float(vstup.replace(",", "."))
             except ValueError:
-                celkem_minut = 600.0
+                celkem_minut = 0.0
 
+    nekonecny_rezim = args.auto or (celkem_minut <= 0)
     start = time.monotonic()
     deadline = None if celkem_minut <= 0 else (start + celkem_minut * 60.0)
     celkem_nahrano = 0
@@ -244,7 +245,7 @@ def main() -> None:
     try:
         while True:
             if _pocet_nedokoncenych() == 0:
-                if args.auto:
+                if nekonecny_rezim:
                     print("\n[💤] Všechna aktuální zadání jsou hotová. Čekám 10 minut a pak znovu zkontroluji GitHub…")
                     time.sleep(600)
                     if not args.bez_aktualizace:

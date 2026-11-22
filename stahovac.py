@@ -49,12 +49,19 @@ def _sestav_url_snimku(base_url: str, jp2_prefix: str | None, cislo_snimku: int)
     return base_url
 
 
-def _cekej_na_platno(br: CDPBrowser, max_s: float = 20.0) -> bool:
+def _cekej_na_platno(br: CDPBrowser, max_s: float = 25.0) -> bool:
+    """Čeká, dokud není vykreslené OpenSeadragon plátno (a zmizí případná Altcha kontrola)."""
     konec = time.monotonic() + max_s
     while time.monotonic() < konec:
-        if br.canvas_box():
-            return True
-        time.sleep(0.5)
+        try:
+            je_botcheck = br.eval_js(
+                "(document.body && /nejste robot|altcha|chviličku strpení/i.test(document.body.innerText || ''))"
+            )
+            if not je_botcheck and br.canvas_box():
+                return True
+        except Exception:
+            pass
+        time.sleep(0.7)
     return False
 
 
