@@ -69,9 +69,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4934?image=216000010-000253-003372-000000-005182-000000-FM-B10035-03210.jp2",
       "od_snimku": 321,
       "do_snimku": 430,
-      "aktualni_snimek": 367,
+      "aktualni_snimek": 371,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3428_pravy_1_260",
@@ -81,7 +81,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3330",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 44,
       "detail": true,
       "hotovo": false
     },
