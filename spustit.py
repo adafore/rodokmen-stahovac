@@ -246,11 +246,12 @@ def main() -> None:
         while True:
             if _pocet_nedokoncenych() == 0:
                 if nekonecny_rezim:
-                    print("\n[💤] Všechna aktuální zadání jsou hotová. Čekám 10 minut a pak znovu zkontroluji GitHub…")
-                    time.sleep(600)
+                    print("\n[💤] Všechna aktuální zadání jsou hotová. Čekám 3 minuty a pak znovu zkontroluji GitHub…")
+                    time.sleep(180)
                     if not args.bez_aktualizace:
                         if zkontroluj_aktualizaci():
-                            os.execv(sys.executable, [sys.executable, str(BASE_DIR / "spustit.py"), *sys.argv[1:]])
+                            nove_args = [a for a in sys.argv[1:] if a != "--auto"] + ["--auto"]
+                            os.execv(sys.executable, [sys.executable, str(BASE_DIR / "spustit.py"), *nove_args])
                     continue
                 print("\n[✓] Všechna zadání v knihy_k_badani.json jsou hotová!")
                 break
@@ -282,9 +283,14 @@ def main() -> None:
 
             celkem_nahrano += nahraj_stazene_obrazky(odeslat_stav_git=True)
 
-            # Mezi bloky zkontrolujeme, jestli na GitHubu nepřibyla nová verze / zadání
+            # Každých 20 min zkontrolujeme GitHub: nová verze nebo okamžitá změna zadání od agenta
             if not args.bez_aktualizace and (deadline is None or time.monotonic() < deadline):
-                zkontroluj_aktualizaci()
+                if zkontroluj_aktualizaci():
+                    print("[↻] Stažena nová verze spouštěče mezi bloky – restartuji plynule dál…")
+                    nove_args = list(sys.argv[1:])
+                    if nekonecny_rezim and "--auto" not in nove_args:
+                        nove_args.append("--auto")
+                    os.execv(sys.executable, [sys.executable, str(BASE_DIR / "spustit.py"), *nove_args])
 
     except KeyboardInterrupt:
         print("\n[!] Přerušeno uživatelem – ještě nahrávám rozdělané snímky na GitHub…")
