@@ -1,5 +1,5 @@
 {
-  "poznamka": "20hodinová HD fronta #2 (22. 11. 2026 večer): 19 bloků, 2048 HD snímků.",
+  "poznamka": "Fronta #3 (23. 11. 2026 po kvalitativním auditu): prioritní přímé linie Kostice/Tvrdonice (3443/3454) + Klobouky (2745/12400) + Herzán (5224); Vrbice 1701–1784 přesunuta na konec.",
   "knihy": [
     {
       "id": "2753_krumvir_92_190",
@@ -182,25 +182,49 @@
       "hotovo": true
     },
     {
-      "id": "5176_vrbice_1_250",
-      "kniha": "5176",
-      "farnost": "Vrbice / Čejkovice",
-      "popis": "HD: Matrika Vrbice/Čejkovice 1701–1740 (P46 Vít Stávek *1701, Jan Herzán × Růžena Cvanová 1730)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/4965",
+      "id": "3443_pravy_1_80",
+      "kniha": "3443",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD PRIORITA #1: PRAVÁ oddací matrika Kostice/Tvrdonice (detail/258 — sňatek P14 Cyril Kosek × P15 Alžběta Trpělková 25. 6. 1919 sn. 49 a sourozenci; oprava za Letovice)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/258",
       "od_snimku": 1,
-      "do_snimku": 250,
-      "aktualni_snimek": 82,
+      "do_snimku": 80,
+      "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
     },
     {
-      "id": "5177_vrbice_1_260",
-      "kniha": "5177",
-      "farnost": "Vrbice / Čejkovice",
-      "popis": "HD: Matrika Vrbice/Čejkovice 1740–1784 (P50 Jiří Cvan × Alžběta Kamenická 1753)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/4966",
+      "id": "3454_rejstrik_64_172",
+      "kniha": "3454",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD PRIORITA #2: Rejstřík oddaných (sn. 64–103) a narozených (sn. 104–172) Tvrdonice/Kostice — pro P35 Trpělka × P36 Prokopová, P37 Kosek × P38 Balogová, P39 Soukeník × P40 Pajková",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/12042",
+      "od_snimku": 64,
+      "do_snimku": 172,
+      "aktualni_snimek": 64,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2745_klobouky_n_95_160",
+      "kniha": "2745",
+      "farnost": "Klobouky u Brna",
+      "popis": "HD PRIORITA #3: Narození Klobouky u Brna 1859–1882 — vlastní rodný zápis P16 Josefa Dobrovolného (*4. 8. 1873) a P21 Genovéfy Tihlaříkové (*17. 9. 1877)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2745",
+      "od_snimku": 95,
+      "do_snimku": 160,
+      "aktualni_snimek": 95,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "12400_klobouky_o_1_120",
+      "kniha": "2755",
+      "farnost": "Klobouky u Brna",
+      "popis": "HD PRIORITA #4: Oddaní Klobouky u Brna 1883–1925 (detail/12400 — P1×P2 1883, P16×P21 1899, P3×P9 1921 a jejich sourozenci)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/12400",
       "od_snimku": 1,
-      "do_snimku": 260,
+      "do_snimku": 120,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
@@ -226,6 +250,30 @@
       "od_snimku": 163,
       "do_snimku": 260,
       "aktualni_snimek": 163,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5176_vrbice_1_250",
+      "kniha": "5176",
+      "farnost": "Vrbice / Čejkovice",
+      "popis": "HD: Matrika Vrbice/Čejkovice 1701–1740 (P46 Vít Stávek *1701, Jan Herzán × Růžena Cvanová 1730)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/4965",
+      "od_snimku": 1,
+      "do_snimku": 250,
+      "aktualni_snimek": 82,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5177_vrbice_1_260",
+      "kniha": "5177",
+      "farnost": "Vrbice / Čejkovice",
+      "popis": "HD: Matrika Vrbice/Čejkovice 1740–1784 (P50 Jiří Cvan × Alžběta Kamenická 1753)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/4966",
+      "od_snimku": 1,
+      "do_snimku": 260,
+      "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
     }
