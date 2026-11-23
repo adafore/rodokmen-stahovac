@@ -49,39 +49,48 @@ def _sestav_url_snimku(base_url: str, jp2_prefix: str | None, cislo_snimku: int)
     return base_url
 
 
-def _cekej_na_platno(br: CDPBrowser, max_s: float = 25.0) -> bool:
-    """Čeká, dokud není vykreslené OpenSeadragon plátno (a zmizí případná Altcha kontrola)."""
+def _cekej_na_platno(br: CDPBrowser, max_s: float = 30.0) -> bool:
+    """Čeká, dokud není vykreslené OpenSeadragon plátno (při Altcha ověření čeká ~20–30 s)."""
     konec = time.monotonic() + max_s
+    videna_altcha = False
     while time.monotonic() < konec:
         try:
             je_botcheck = br.eval_js(
                 "(document.body && /nejste robot|altcha|chviličku strpení/i.test(document.body.innerText || ''))"
             )
-            if not je_botcheck and br.canvas_box():
+            if je_botcheck:
+                if not videna_altcha:
+                    print("  [⏳] Ověření Altcha – čekám na dokončení (až 20–30 s)…")
+                    videna_altcha = True
+                    # Zajistíme alespoň 20 s od okamžiku, kdy se Altcha objevila
+                    konec = max(konec, time.monotonic() + 25.0)
+            elif br.canvas_box():
+                if videna_altcha:
+                    time.sleep(3.0)
                 return True
         except Exception:
             pass
-        time.sleep(0.7)
+        time.sleep(0.8)
     return False
 
 
 def _otevri_prohlizec_snimku(br: CDPBrowser, base_url: str, snimek: int) -> str | None:
     jp2_prefix = _extrahuj_jp2_prefix(base_url)
     start_url = _sestav_url_snimku(base_url, jp2_prefix, snimek) if jp2_prefix else base_url
-    br.goto(start_url, wait_s=CEKANI_ALTCHA_S)
+    br.goto(start_url, wait_s=5.0)
 
-    if not _cekej_na_platno(br, max_s=6.0):
+    if not _cekej_na_platno(br, max_s=25.0):
         if br.click_prohlizet():
-            time.sleep(CEKANI_ALTCHA_S)
-        _cekej_na_platno(br, max_s=15.0)
+            time.sleep(4.0)
+        _cekej_na_platno(br, max_s=25.0)
 
     if not jp2_prefix:
         jp2_prefix = _extrahuj_jp2_prefix(br.url)
         if jp2_prefix and snimek > 1:
             cil = _sestav_url_snimku(base_url, jp2_prefix, snimek)
             if cil != br.url:
-                br.goto(cil, wait_s=CEKANI_ALTCHA_S)
-                _cekej_na_platno(br, max_s=12.0)
+                br.goto(cil, wait_s=4.0)
+                _cekej_na_platno(br, max_s=25.0)
 
     time.sleep(random.uniform(2.0, 3.0))
     return jp2_prefix
@@ -218,6 +227,7 @@ def spusti_stahovani(
                 soubor_nazev = f"k{kniha_id}_sn{snimek:03d}.png"
                 soubor_cesta = cilova_slozka / soubor_nazev
 
+                _cekej_na_platno(br, max_s=25.0)
                 snimek_byty = br.screenshot_canvas()
                 aktualni_hash = hashlib.sha1(snimek_byty).hexdigest()
                 if posledni_hash and aktualni_hash == posledni_hash:
