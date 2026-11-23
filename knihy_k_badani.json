@@ -189,9 +189,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/258",
       "od_snimku": 1,
       "do_snimku": 80,
-      "aktualni_snimek": 49,
+      "aktualni_snimek": 81,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3454_rejstrik_64_172",
@@ -201,7 +201,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/12042",
       "od_snimku": 64,
       "do_snimku": 172,
-      "aktualni_snimek": 64,
+      "aktualni_snimek": 81,
       "detail": true,
       "hotovo": false
     },
