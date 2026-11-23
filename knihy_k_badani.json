@@ -201,9 +201,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/12042",
       "od_snimku": 64,
       "do_snimku": 172,
-      "aktualni_snimek": 130,
+      "aktualni_snimek": 173,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2745_klobouky_n_95_160",
@@ -213,7 +213,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2745",
       "od_snimku": 95,
       "do_snimku": 160,
-      "aktualni_snimek": 95,
+      "aktualni_snimek": 101,
       "detail": true,
       "hotovo": false
     },
