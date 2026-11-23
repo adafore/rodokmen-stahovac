@@ -9,9 +9,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2754?image=216000010-000253-003370-000000-002753-000000-00-B08780-00920.jp2",
       "od_snimku": 92,
       "do_snimku": 190,
-      "aktualni_snimek": 92,
+      "aktualni_snimek": 94,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3438_fix_24_35",
@@ -21,9 +21,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/256?image=216000010-000253-003370-000000-003438-000000-FM-B09548-00240.jp2",
       "od_snimku": 24,
       "do_snimku": 35,
-      "aktualni_snimek": 24,
+      "aktualni_snimek": 36,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3057_fix_69_71",
@@ -33,9 +33,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00690.jp2",
       "od_snimku": 69,
       "do_snimku": 71,
-      "aktualni_snimek": 69,
+      "aktualni_snimek": 72,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3057_fix_99_102",
@@ -45,9 +45,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13564?image=216000010-000253-003370-000000-003057-000000-00-00990.jp2",
       "od_snimku": 99,
       "do_snimku": 102,
-      "aktualni_snimek": 99,
+      "aktualni_snimek": 103,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3055_hd_66_80",
@@ -57,9 +57,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2981?image=216000010-000253-003370-000000-003055-000000-FM-B09379-00660.jp2",
       "od_snimku": 66,
       "do_snimku": 80,
-      "aktualni_snimek": 66,
+      "aktualni_snimek": 81,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5182_hd_321_430",
