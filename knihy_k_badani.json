@@ -93,9 +93,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3345",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 37,
+      "aktualni_snimek": 39,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3453_rejstrik_1_120",
@@ -105,7 +105,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/261",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 46,
       "detail": true,
       "hotovo": false
     },
