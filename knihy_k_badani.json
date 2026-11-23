@@ -105,9 +105,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/261",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 93,
+      "aktualni_snimek": 121,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "14893_klobouky_1_220",
@@ -117,7 +117,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/14893",
       "od_snimku": 1,
       "do_snimku": 220,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 21,
       "detail": true,
       "hotovo": false
     },
