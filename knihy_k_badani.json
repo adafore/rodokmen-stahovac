@@ -261,9 +261,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4965",
       "od_snimku": 1,
       "do_snimku": 250,
-      "aktualni_snimek": 153,
+      "aktualni_snimek": 155,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5177_vrbice_1_260",
@@ -273,7 +273,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4966",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 47,
       "detail": true,
       "hotovo": false
     }
