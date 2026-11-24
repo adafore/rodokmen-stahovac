@@ -237,9 +237,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4950?image=216000010-000253-003372-000000-005224-000000-00-B06952-00010.jp2",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 99,
+      "aktualni_snimek": 121,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2754_hd_163_260",
@@ -249,9 +249,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2755?image=216000010-000253-003370-000000-002754-000000-00-B01694-01630.jp2",
       "od_snimku": 163,
       "do_snimku": 260,
-      "aktualni_snimek": 163,
+      "aktualni_snimek": 165,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5176_vrbice_1_250",
@@ -261,7 +261,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4965",
       "od_snimku": 1,
       "do_snimku": 250,
-      "aktualni_snimek": 82,
+      "aktualni_snimek": 103,
       "detail": true,
       "hotovo": false
     },
