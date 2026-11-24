@@ -273,9 +273,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4966",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 144,
+      "aktualni_snimek": 154,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     }
   ]
 }
