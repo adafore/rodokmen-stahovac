@@ -285,9 +285,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2090",
       "od_snimku": 1,
       "do_snimku": 36,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 37,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5197_cejkovice_idx_o_1_61",
