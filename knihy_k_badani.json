@@ -225,9 +225,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/12400",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 83,
+      "aktualni_snimek": 121,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5224_hd_1_120",
@@ -237,7 +237,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4950?image=216000010-000253-003372-000000-005224-000000-00-B06952-00010.jp2",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 10,
       "detail": true,
       "hotovo": false
     },
