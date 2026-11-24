@@ -1,5 +1,5 @@
 {
-  "poznamka": "Fronta #3 (23. 11. 2026 po kvalitativním auditu): prioritní přímé linie Kostice/Tvrdonice (3443/3454) + Klobouky (2745/12400) + Herzán (5224); Vrbice 1701–1784 přesunuta na konec.",
+  "poznamka": "24hodinová HD fronta #4 (24. 11. 2026): 16 ověřených knih přímo z katalogu MZA, celkem 2976 HD snímků (~21–24 hodin práce bez banu).",
   "knihy": [
     {
       "id": "2753_krumvir_92_190",
@@ -276,6 +276,198 @@
       "aktualni_snimek": 154,
       "detail": true,
       "hotovo": true
+    },
+    {
+      "id": "2813_krumvir_o_1_36",
+      "kniha": "2813",
+      "farnost": "Krumvíř",
+      "popis": "HD FRONTA #4 (1/16): Oddaní Krumvíř 1819–1849 (jen 36 sn.! Sňatek P7 Jakub Veselý × P8 Antonie Halmová 25. 1. 1847 + P80 Bartoloměj Dobrovolný 10. 1. 1844)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2090",
+      "od_snimku": 1,
+      "do_snimku": 36,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5197_cejkovice_idx_o_1_61",
+      "kniha": "5197",
+      "farnost": "Čejkovice",
+      "popis": "HD FRONTA #4 (2/16): Rejstřík oddaných Čejkovice 1784–1949 (61 sn. — P42 Martin Cvan st. × P43 Marjana Herzánová, P85 Šimon Stávek × P86 Mariana)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/14877",
+      "od_snimku": 1,
+      "do_snimku": 61,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5192a_cejkovice_o_1_338",
+      "kniha": "5192a",
+      "farnost": "Čejkovice",
+      "popis": "HD FRONTA #4 (3/16): Oddaní Čejkovice 1843–1932 (338 sn. — přímé sňatky P42 × P43 Cvan/Herzán a P85 × P86 Stávek)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/9323",
+      "od_snimku": 1,
+      "do_snimku": 338,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5183_cejkovice_n_1_359",
+      "kniha": "5183",
+      "farnost": "Čejkovice",
+      "popis": "HD FRONTA #4 (4/16): Narození Čejkovice 1882–1920 (359 sn. — P41 Martin Cvan *20. 10. 1883 čp. 382 a P68 Martin Cvan *27. 7. 1916 + sourozenci)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/11693",
+      "od_snimku": 1,
+      "do_snimku": 359,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3053_nemcicky_no_1_275",
+      "kniha": "3053",
+      "farnost": "Němčičky",
+      "popis": "HD FRONTA #4 (5/16): Narození 1785–1834 a Oddaní 1785–1872 Němčičky (275 sn. — sňatky P59×P83 Kameník/Šeda, P110×P111, P112×P113, P67 Procházka, P108 Macháč)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2978",
+      "od_snimku": 1,
+      "do_snimku": 275,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2734_klobouky_n_1_144",
+      "kniha": "2734",
+      "farnost": "Klobouky u Brna",
+      "popis": "HD FRONTA #4 (6/16): Narození Klobouky u Brna 1838–1858 (144 sn. — P1 Karel Forejtník, P2 Rozálie Veselá, P22, P23, P24, P25)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2744",
+      "od_snimku": 1,
+      "do_snimku": 144,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3434_kostice_n_1_296",
+      "kniha": "3434",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (7/16): Narození Kostice 1881–1912 (296 sn., česky — P15 Alžběta Trpělková *14. 9. 1893 čp. 146 + sourozenci)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
+      "od_snimku": 1,
+      "do_snimku": 296,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3442_kostice_o_1_138",
+      "kniha": "3442",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
+      "od_snimku": 1,
+      "do_snimku": 138,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3437_tvrdonice_o_1_228",
+      "kniha": "3437",
+      "farnost": "Tvrdonice",
+      "popis": "HD FRONTA #4 (9/16): Oddaní Tvrdonice 1762–1874 (228 sn. — sňatek P37 Josef Kosek st. × P38 Helena Balogová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3333",
+      "od_snimku": 1,
+      "do_snimku": 228,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3441_kostice_o_1_128",
+      "kniha": "3441",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (10/16): Oddaní Kostice 1790–1867 (128 sn. — sňatek P39 Josef Soukeník × P40 Terezie Pajková)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3335",
+      "od_snimku": 1,
+      "do_snimku": 128,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3427_tvrdonice_n_1_125",
+      "kniha": "3427",
+      "farnost": "Tvrdonice",
+      "popis": "HD FRONTA #4 (11/16): Narození Tvrdonice 1837–1862 (125 sn. — P33 Josef Kosek *18. 8. 1862 a rodiče P37×P38)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3329",
+      "od_snimku": 1,
+      "do_snimku": 125,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3610_vpavlovice_idx_1_123",
+      "kniha": "3610",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD FRONTA #4 (12/16): Rejstřík N/O Velké Pavlovice 1899–1949 (123 sn. — P70 František Komárek × P71 Anna Kurdíková + hledání P106 Benda × P107 Macháčová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10070",
+      "od_snimku": 1,
+      "do_snimku": 123,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3606_vpavlovice_o_1_198",
+      "kniha": "3606",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD FRONTA #4 (13/16): Oddaní Velké Pavlovice 1921–1949 (198 sn. — sňatek P70 František Komárek × P71 Anna Kurdíková z Velkých Pavlovic)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/13561",
+      "od_snimku": 1,
+      "do_snimku": 198,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2370_boretice_idx_1_172",
+      "kniha": "2370",
+      "farnost": "Bořetice",
+      "popis": "HD FRONTA #4 (14/16): Rejstřík N/O Bořetice 1879–1949 (172 sn. — hledání sňatku P106 Jan Benda × P107 Ludmila Macháčová v sousední farnosti)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10041",
+      "od_snimku": 1,
+      "do_snimku": 172,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2340_boleradice_idx_1_97",
+      "kniha": "2340",
+      "farnost": "Boleradice",
+      "popis": "HD FRONTA #4 (15/16): Rejstřík N/O Boleradice 1887–1927 (97 sn. — hledání P106 Jan Benda × P107 Ludmila Macháčová; farář z Boleradic oddával P104×P105)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10040",
+      "od_snimku": 1,
+      "do_snimku": 97,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2798_kobyli_o_1_258",
+      "kniha": "2798",
+      "farnost": "Kobylí",
+      "popis": "HD FRONTA #4 (16/16): Oddaní Kobylí 1864–1925 (258 sn. — rod Cvan v sousední farnosti + hledání P106 Benda × P107 Macháčová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/209",
+      "od_snimku": 1,
+      "do_snimku": 258,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
     }
   ]
 }
