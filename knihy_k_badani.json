@@ -362,31 +362,26 @@
       "hotovo": true
     },
     {
-      "id": "3605_vpavlovice_o_1_220",
-      "kniha": "3605",
-      "farnost": "Velké Pavlovice",
-      "popis": "HD PRIORITA GEN 6: Oddaní Velké Pavlovice 1885–1920 (sňatek rodičů P71 Anny Kurdíkové → dokončení 6. generace na 64/64)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/268",
+      "id": "3442_kostice_o_1_138",
+      "kniha": "3442",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
       "od_snimku": 1,
-<<<<<<< Updated upstream
-      "do_snimku": 220,
-      "aktualni_snimek": 1,
-=======
       "do_snimku": 138,
       "aktualni_snimek": 139,
       "detail": true,
       "hotovo": true
     },
     {
-      "id": "3434_kostice_n_1_296",
-      "kniha": "3434",
-      "farnost": "Tvrdonice / Kostice",
-      "popis": "HD FRONTA #4 (7/16): Narození Kostice 1881–1912 (296 sn., česky — P15 Alžběta Trpělková *14. 9. 1893 čp. 146 + sourozenci)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
+      "id": "3605_vpavlovice_o_1_220",
+      "kniha": "3605",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD PRIORITA GEN 6: Oddaní Velké Pavlovice 1885–1920 (sňatek rodičů P71 Anny Kurdíkové → dokončení 6. generace na 64/64)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/268",
       "od_snimku": 1,
-      "do_snimku": 296,
-      "aktualni_snimek": 6,
->>>>>>> Stashed changes
+      "do_snimku": 220,
+      "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
     },
@@ -410,19 +405,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
       "od_snimku": 1,
       "do_snimku": 296,
-      "aktualni_snimek": 1,
-      "detail": true,
-      "hotovo": false
-    },
-    {
-      "id": "3442_kostice_o_1_138",
-      "kniha": "3442",
-      "farnost": "Tvrdonice / Kostice",
-      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
-      "od_snimku": 1,
-      "do_snimku": 138,
-      "aktualni_snimek": 96,
+      "aktualni_snimek": 6,
       "detail": true,
       "hotovo": false
     },

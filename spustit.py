@@ -100,10 +100,16 @@ def zkontroluj_aktualizaci() -> bool:
 
     print("[↑] Na GitHubu je nová verze nebo nové zadání – stahuji…")
     r_pull = _run(["git", "pull", "--rebase", "--autostash", "origin", "main"])
-    if r_pull.returncode != 0:
-        print("[!] Konflikt při slučování – přebírám čistou verzi z GitHubu (origin/main)…")
+    json_ok = True
+    try:
+        json.loads(KNIHY_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        json_ok = False
+    if r_pull.returncode != 0 or not json_ok:
+        print("[!] Konflikt při slučování (nebo poškozený JSON) – přebírám čistou verzi z GitHubu (origin/main)…")
         _run(["git", "rebase", "--abort"])
         _run(["git", "reset", "--hard", "origin/main"])
+        _run(["git", "stash", "drop"])
 
     nova_verze = _cti_verzi()
     if nova_verze != stara_verze:
@@ -202,8 +208,14 @@ def nahraj_stazene_obrazky(odeslat_stav_git: bool = True) -> int:
     uklid_odeslane_skeny()
 
     if odeslat_stav_git:
+        try:
+            json.loads(KNIHY_JSON.read_text(encoding="utf-8"))
+            json_valid = True
+        except Exception:
+            json_valid = False
+            print("[!] knihy_k_badani.json není platný JSON – neodesílám na GitHub, opravím při příštím pullu.")
         r_diff = _run(["git", "status", "--porcelain", "knihy_k_badani.json"])
-        if r_diff.stdout.strip():
+        if json_valid and r_diff.stdout.strip():
             _run(["git", "add", "knihy_k_badani.json"])
             _run(["git", "commit", "-m", f"Průběh z {host}: +{len(pngs)} snímků ({zip_name})"])
             r_push = _run(["git", "push", "origin", "main"])
