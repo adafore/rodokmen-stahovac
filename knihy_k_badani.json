@@ -309,9 +309,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/9323",
       "od_snimku": 1,
       "do_snimku": 338,
-      "aktualni_snimek": 315,
+      "aktualni_snimek": 339,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5183_cejkovice_n_1_359",
@@ -321,7 +321,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/11693",
       "od_snimku": 1,
       "do_snimku": 359,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 23,
       "detail": true,
       "hotovo": false
     },
