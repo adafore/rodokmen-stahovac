@@ -357,9 +357,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/13561",
       "od_snimku": 1,
       "do_snimku": 198,
-      "aktualni_snimek": 157,
+      "aktualni_snimek": 199,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3442_kostice_o_1_138",
@@ -369,7 +369,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
       "od_snimku": 1,
       "do_snimku": 138,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 4,
       "detail": true,
       "hotovo": false
     },
