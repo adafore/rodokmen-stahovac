@@ -1,5 +1,5 @@
 {
-  "poznamka": "HD fronta #4b (25. 11. 2026): Priorita dokončení 5. a 6. generace (Velké Pavlovice 3610/3606/3601/3605 + Kostice 3442/3434 hned po dojetí 3053!).",
+  "poznamka": "HD fronta #4c (25. 11. 2026): TOP PRIORITA 3605 (Velke Pavlovice O 1885-1920, pag. 132 = posledni 3 sloty 6. generace pro 64/64 = 100 %!), pak 3601, 3434, zbytek 3442.",
   "knihy": [
     {
       "id": "2753_krumvir_92_190",
@@ -362,25 +362,13 @@
       "hotovo": true
     },
     {
-      "id": "3442_kostice_o_1_138",
-      "kniha": "3442",
-      "farnost": "Tvrdonice / Kostice",
-      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
+      "id": "3605_vpavlovice_o_1_220",
+      "kniha": "3605",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD PRIORITA GEN 6: Oddaní Velké Pavlovice 1885–1920 (sňatek rodičů P71 Anny Kurdíkové → dokončení 6. generace na 64/64)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/268",
       "od_snimku": 1,
-      "do_snimku": 138,
-      "aktualni_snimek": 96,
-      "detail": true,
-      "hotovo": false
-    },
-    {
-      "id": "3434_kostice_n_1_296",
-      "kniha": "3434",
-      "farnost": "Tvrdonice / Kostice",
-      "popis": "HD FRONTA #4 (7/16): Narození Kostice 1881–1912 (296 sn., česky — P15 Alžběta Trpělková *14. 9. 1893 čp. 146 + sourozenci)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
-      "od_snimku": 1,
-      "do_snimku": 296,
+      "do_snimku": 220,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
@@ -398,14 +386,26 @@
       "hotovo": false
     },
     {
-      "id": "3605_vpavlovice_o_1_220",
-      "kniha": "3605",
-      "farnost": "Velké Pavlovice",
-      "popis": "HD PRIORITA GEN 6: Oddaní Velké Pavlovice 1885–1920 (sňatek rodičů P71 Anny Kurdíkové → dokončení 6. generace na 64/64)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/268",
+      "id": "3434_kostice_n_1_296",
+      "kniha": "3434",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (7/16): Narození Kostice 1881–1912 (296 sn., česky — P15 Alžběta Trpělková *14. 9. 1893 čp. 146 + sourozenci)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
       "od_snimku": 1,
-      "do_snimku": 220,
+      "do_snimku": 296,
       "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3442_kostice_o_1_138",
+      "kniha": "3442",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
+      "od_snimku": 1,
+      "do_snimku": 138,
+      "aktualni_snimek": 96,
       "detail": true,
       "hotovo": false
     },
