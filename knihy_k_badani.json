@@ -405,9 +405,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3561",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 80,
+      "aktualni_snimek": 125,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3441_kostice_o_1_128",
@@ -417,7 +417,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3335",
       "od_snimku": 1,
       "do_snimku": 128,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 3,
       "detail": true,
       "hotovo": false
     },
