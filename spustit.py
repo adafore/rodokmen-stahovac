@@ -120,6 +120,24 @@ def zkontroluj_aktualizaci() -> bool:
     return novy_spustit != stary_spustit
 
 
+def uklid_odeslane_skeny() -> None:
+    """Smaže staré už nahrané snímky ze skeny/odeslano/ a osiřelé zipy ze skeny/baliky/."""
+    smazano_souboru = 0
+    smazano_bajtu = 0
+    for slozka, vzor in ((ODESLANO_DIR, "*.png"), (BALIKY_DIR, "*.zip")):
+        if not slozka.exists():
+            continue
+        for f in slozka.glob(vzor):
+            try:
+                smazano_bajtu += f.stat().st_size
+                f.unlink()
+                smazano_souboru += 1
+            except OSError:
+                pass
+    if smazano_souboru:
+        print(f"[🧹] Uvolněno místo na disku: smazáno {smazano_souboru} již nahraných souborů ({smazano_bajtu / (1024*1024):.1f} MB).")
+
+
 def nahraj_stazene_obrazky(odeslat_stav_git: bool = True) -> int:
     """
     Zabalí všechny nové PNG + manifest.json ze skeny/vstup/ do ZIPu a nahraje
@@ -170,14 +188,18 @@ def nahraj_stazene_obrazky(odeslat_stav_git: bool = True) -> int:
 
     print(f"[✓] Nahráno na GitHub: {zip_name} ({len(pngs)} snímků)!")
 
-    # Přesuneme odeslané PNG do skeny/odeslano/, aby se neposílaly znovu
+    # Smažeme odeslané PNG po úspěšném uploadu na GitHub (šetří disk na mini PC)
     for p in pngs:
-        shutil.move(str(p), str(ODESLANO_DIR / p.name))
+        try:
+            p.unlink()
+        except OSError:
+            pass
     # Smažeme lokální zip po úspěšném uploadu (šetří disk na mini PC)
     try:
         zip_path.unlink()
     except OSError:
         pass
+    uklid_odeslane_skeny()
 
     if odeslat_stav_git:
         r_diff = _run(["git", "status", "--porcelain", "knihy_k_badani.json"])
@@ -216,6 +238,9 @@ def main() -> None:
     except ImportError:
         print("[📦] Doinstalovávám requirements.txt (websocket-client)…")
         _run([sys.executable, "-m", "pip", "install", "-q", "-r", str(REQ_TXT)], capture=False)
+
+    # Nejdřív uvolníme místo po starých už nahraných snímcích (skeny/odeslano/)
+    uklid_odeslane_skeny()
 
     # Pokud z minulého běhu zůstaly neodeslané snímky, nejdřív je odešleme
     nahraj_stazene_obrazky(odeslat_stav_git=True)
