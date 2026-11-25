@@ -1,5 +1,5 @@
 {
-  "poznamka": "24hodinová HD fronta #4 (24. 11. 2026): 16 ověřených knih přímo z katalogu MZA, celkem 2976 HD snímků (~21–24 hodin práce bez banu).",
+  "poznamka": "HD fronta #4b (25. 11. 2026): Priorita dokončení 5. a 6. generace (Velké Pavlovice 3610/3606/3601/3605 + Kostice 3442/3434 hned po dojetí 3053!).",
   "knihy": [
     {
       "id": "2753_krumvir_92_190",
@@ -338,13 +338,37 @@
       "hotovo": false
     },
     {
-      "id": "2734_klobouky_n_1_144",
-      "kniha": "2734",
-      "farnost": "Klobouky u Brna",
-      "popis": "HD FRONTA #4 (6/16): Narození Klobouky u Brna 1838–1858 (144 sn. — P1 Karel Forejtník, P2 Rozálie Veselá, P22, P23, P24, P25)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/2744",
+      "id": "3610_vpavlovice_idx_1_123",
+      "kniha": "3610",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD FRONTA #4 (12/16): Rejstřík N/O Velké Pavlovice 1899–1949 (123 sn. — P70 František Komárek × P71 Anna Kurdíková + hledání P106 Benda × P107 Macháčová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/10070",
       "od_snimku": 1,
-      "do_snimku": 144,
+      "do_snimku": 123,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3606_vpavlovice_o_1_198",
+      "kniha": "3606",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD FRONTA #4 (13/16): Oddaní Velké Pavlovice 1921–1949 (198 sn. — sňatek P70 František Komárek × P71 Anna Kurdíková z Velkých Pavlovic)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/13561",
+      "od_snimku": 1,
+      "do_snimku": 198,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3442_kostice_o_1_138",
+      "kniha": "3442",
+      "farnost": "Tvrdonice / Kostice",
+      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
+      "od_snimku": 1,
+      "do_snimku": 138,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
@@ -362,13 +386,37 @@
       "hotovo": false
     },
     {
-      "id": "3442_kostice_o_1_138",
-      "kniha": "3442",
-      "farnost": "Tvrdonice / Kostice",
-      "popis": "HD FRONTA #4 (8/16): Oddaní Kostice 1868–1908 (138 sn. — sňatek P35 Josef Trpělka × P36 Juliana Prokopová)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/3336",
+      "id": "3601_vpavlovice_n_1_380",
+      "kniha": "3601",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD PRIORITA GEN 5-6: Narození Velké Pavlovice 1879–1908 (vlastní rodný zápis P71 Anny Kurdíkové + všichni 4 prarodiče v 6. generaci)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/9908",
       "od_snimku": 1,
-      "do_snimku": 138,
+      "do_snimku": 380,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3605_vpavlovice_o_1_220",
+      "kniha": "3605",
+      "farnost": "Velké Pavlovice",
+      "popis": "HD PRIORITA GEN 6: Oddaní Velké Pavlovice 1885–1920 (sňatek rodičů P71 Anny Kurdíkové → dokončení 6. generace na 64/64)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/268",
+      "od_snimku": 1,
+      "do_snimku": 220,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2734_klobouky_n_1_144",
+      "kniha": "2734",
+      "farnost": "Klobouky u Brna",
+      "popis": "HD FRONTA #4 (6/16): Narození Klobouky u Brna 1838–1858 (144 sn. — P1 Karel Forejtník, P2 Rozálie Veselá, P22, P23, P24, P25)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2744",
+      "od_snimku": 1,
+      "do_snimku": 144,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
@@ -410,25 +458,13 @@
       "hotovo": false
     },
     {
-      "id": "3610_vpavlovice_idx_1_123",
-      "kniha": "3610",
-      "farnost": "Velké Pavlovice",
-      "popis": "HD FRONTA #4 (12/16): Rejstřík N/O Velké Pavlovice 1899–1949 (123 sn. — P70 František Komárek × P71 Anna Kurdíková + hledání P106 Benda × P107 Macháčová)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/10070",
+      "id": "2798_kobyli_o_1_258",
+      "kniha": "2798",
+      "farnost": "Kobylí",
+      "popis": "HD FRONTA #4 (16/16): Oddaní Kobylí 1864–1925 (258 sn. — rod Cvan v sousední farnosti + hledání P106 Benda × P107 Macháčová)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/209",
       "od_snimku": 1,
-      "do_snimku": 123,
-      "aktualni_snimek": 1,
-      "detail": true,
-      "hotovo": false
-    },
-    {
-      "id": "3606_vpavlovice_o_1_198",
-      "kniha": "3606",
-      "farnost": "Velké Pavlovice",
-      "popis": "HD FRONTA #4 (13/16): Oddaní Velké Pavlovice 1921–1949 (198 sn. — sňatek P70 František Komárek × P71 Anna Kurdíková z Velkých Pavlovic)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/13561",
-      "od_snimku": 1,
-      "do_snimku": 198,
+      "do_snimku": 258,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
@@ -453,18 +489,6 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10040",
       "od_snimku": 1,
       "do_snimku": 97,
-      "aktualni_snimek": 1,
-      "detail": true,
-      "hotovo": false
-    },
-    {
-      "id": "2798_kobyli_o_1_258",
-      "kniha": "2798",
-      "farnost": "Kobylí",
-      "popis": "HD FRONTA #4 (16/16): Oddaní Kobylí 1864–1925 (258 sn. — rod Cvan v sousední farnosti + hledání P106 Benda × P107 Macháčová)",
-      "url": "https://www.mza.cz/actapublica/matrika/detail/209",
-      "od_snimku": 1,
-      "do_snimku": 258,
       "aktualni_snimek": 1,
       "detail": true,
       "hotovo": false
