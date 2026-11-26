@@ -429,9 +429,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3333",
       "od_snimku": 1,
       "do_snimku": 228,
-      "aktualni_snimek": 196,
+      "aktualni_snimek": 229,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5181_cejkovice_noz_1813_1842",
@@ -441,7 +441,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4933",
       "od_snimku": 1,
       "do_snimku": 380,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 15,
       "detail": true,
       "hotovo": false
     },
