@@ -441,9 +441,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4933",
       "od_snimku": 1,
       "do_snimku": 380,
-      "aktualni_snimek": 340,
+      "aktualni_snimek": 381,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2625_hbojanovice_noz_1862_1883",
@@ -453,7 +453,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2626",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 7,
       "detail": true,
       "hotovo": false
     },
