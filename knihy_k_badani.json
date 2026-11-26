@@ -573,9 +573,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10041",
       "od_snimku": 1,
       "do_snimku": 172,
-      "aktualni_snimek": 152,
+      "aktualni_snimek": 173,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2340_boleradice_idx_1_97",
@@ -585,7 +585,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10040",
       "od_snimku": 1,
       "do_snimku": 97,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 30,
       "detail": true,
       "hotovo": false
     }
