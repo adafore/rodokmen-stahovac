@@ -561,9 +561,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/209",
       "od_snimku": 1,
       "do_snimku": 258,
-      "aktualni_snimek": 223,
+      "aktualni_snimek": 259,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2370_boretice_idx_1_172",
@@ -573,7 +573,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10041",
       "od_snimku": 1,
       "do_snimku": 172,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 14,
       "detail": true,
       "hotovo": false
     },
