@@ -585,9 +585,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10040",
       "od_snimku": 1,
       "do_snimku": 97,
-      "aktualni_snimek": 81,
+      "aktualni_snimek": 98,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     }
   ]
 }
