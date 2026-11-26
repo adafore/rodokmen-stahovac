@@ -537,9 +537,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2753",
       "od_snimku": 1,
       "do_snimku": 220,
-      "aktualni_snimek": 57,
+      "aktualni_snimek": 59,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3433_kostice_n_1859_1880",
@@ -549,7 +549,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3332",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 45,
       "detail": true,
       "hotovo": false
     },
