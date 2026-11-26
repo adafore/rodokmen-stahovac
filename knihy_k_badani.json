@@ -465,9 +465,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2625",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 108,
+      "aktualni_snimek": 152,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2797_kobyli_o_1784_1863",
@@ -477,7 +477,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/1789",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 3,
       "detail": true,
       "hotovo": false
     },
