@@ -477,9 +477,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/1789",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 231,
+      "aktualni_snimek": 261,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3601_vpavlovice_n_1_380",
@@ -489,7 +489,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/9908",
       "od_snimku": 1,
       "do_snimku": 380,
-      "aktualni_snimek": 34,
+      "aktualni_snimek": 50,
       "detail": true,
       "hotovo": false
     },
