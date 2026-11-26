@@ -417,9 +417,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3335",
       "od_snimku": 1,
       "do_snimku": 128,
-      "aktualni_snimek": 93,
+      "aktualni_snimek": 129,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3437_tvrdonice_o_1_228",
@@ -429,7 +429,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3333",
       "od_snimku": 1,
       "do_snimku": 228,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 10,
       "detail": true,
       "hotovo": false
     },
