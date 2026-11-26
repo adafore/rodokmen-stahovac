@@ -501,9 +501,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
       "od_snimku": 1,
       "do_snimku": 296,
-      "aktualni_snimek": 257,
+      "aktualni_snimek": 297,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2734_klobouky_n_1_144",
@@ -513,7 +513,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2744",
       "od_snimku": 1,
       "do_snimku": 144,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 8,
       "detail": true,
       "hotovo": false
     },
