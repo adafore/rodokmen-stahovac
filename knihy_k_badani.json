@@ -549,9 +549,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3332",
       "od_snimku": 1,
       "do_snimku": 260,
-      "aktualni_snimek": 180,
+      "aktualni_snimek": 182,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2798_kobyli_o_1_258",
@@ -561,7 +561,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/209",
       "od_snimku": 1,
       "do_snimku": 258,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 43,
       "detail": true,
       "hotovo": false
     },
