@@ -489,9 +489,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/9908",
       "od_snimku": 1,
       "do_snimku": 380,
-      "aktualni_snimek": 361,
+      "aktualni_snimek": 373,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3434_kostice_n_1_296",
@@ -501,7 +501,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/10876",
       "od_snimku": 1,
       "do_snimku": 296,
-      "aktualni_snimek": 6,
+      "aktualni_snimek": 37,
       "detail": true,
       "hotovo": false
     },
