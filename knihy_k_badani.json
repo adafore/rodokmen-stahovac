@@ -513,9 +513,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2744",
       "od_snimku": 1,
       "do_snimku": 144,
-      "aktualni_snimek": 143,
+      "aktualni_snimek": 145,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3427_tvrdonice_n_1_125",
@@ -525,7 +525,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/3329",
       "od_snimku": 1,
       "do_snimku": 125,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 46,
       "detail": true,
       "hotovo": false
     },
