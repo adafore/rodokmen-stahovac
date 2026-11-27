@@ -1,5 +1,5 @@
 {
-  "poznamka": "HD nocni + skolni fronta #5 (25.-26. 11. 2026, ~28 hod / 3800+ sn.): 7. a 8. generace (Velke Pavlovice 3609/3604, Kostice 3441/3433, Tvrdonice 3437, Cejkovice 5181, Horni Bojanovice 2625/2624, Kobyli 2797, Klobouky 2752).",
+  "poznamka": "HD fronta #6 (27. 11. 2026): Dokončení 7. a 8. generace – Němčičky Zemřelí 3058 & Rejstříky 3060/3061/3063, Horní Bojanovice oprava sn24 + 2622/2623, Čejkovice Poddvorov 5189/5188 & 5180, Klobouky N 2733/2732/2731/2740.",
   "knihy": [
     {
       "id": "2753_krumvir_92_190",
@@ -588,6 +588,174 @@
       "aktualni_snimek": 98,
       "detail": true,
       "hotovo": true
+    },
+    {
+      "id": "2624_fix_23_26",
+      "kniha": "2624",
+      "farnost": "Horní Bojanovice",
+      "popis": "FRONTA #6 PRIORITA 1: Oprava prázdného sn. 24 (Oddaní 1851 pag. 46–47 — hledání sňatku P182 Pavel Půček × P183 Terezie Damborská)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2625?image=216000010-000253-003370-000000-002624-000000-00-B01420-00230.jp2",
+      "od_snimku": 23,
+      "do_snimku": 26,
+      "aktualni_snimek": 23,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3058_nemcicky_u_1859_1919",
+      "kniha": "3058",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #6 PRIORITA 2 (GEN 7): Zemřelí Němčičky 1859–1919 (úmrtní věk a původ P112 Fabiána Šedy, P140 Šebestiána Komárka, P134/P135 Benda, P178 Tomáše Šlancara, P183 Terezie Půčkové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2982",
+      "od_snimku": 1,
+      "do_snimku": 120,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3060_nemcicky_idx_1785_1949",
+      "kniha": "3060",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #6 (GEN 7–8): Rejstřík N (1785–1835), O (1785–1949) a Z (1785–1858) Němčičky (rychlá kontrola Komárek/Jeřábek/Šeda/Včela/Sadílek)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2984",
+      "od_snimku": 1,
+      "do_snimku": 140,
+      "aktualni_snimek": 1,
+      "detail": false,
+      "hotovo": false
+    },
+    {
+      "id": "3061_nemcicky_idx_n_1835_1869",
+      "kniha": "3061",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #6 (GEN 6–7): Rejstřík narozených Němčičky 1835–1869",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2985",
+      "od_snimku": 1,
+      "do_snimku": 100,
+      "aktualni_snimek": 1,
+      "detail": false,
+      "hotovo": false
+    },
+    {
+      "id": "3063_nemcicky_idx_z_1859_1949",
+      "kniha": "3063",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #6 (GEN 6–7): Rejstřík zemřelých Němčičky 1859–1949",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2987",
+      "od_snimku": 1,
+      "do_snimku": 100,
+      "aktualni_snimek": 1,
+      "detail": false,
+      "hotovo": false
+    },
+    {
+      "id": "2622_hbojanovice_no_1800_1835",
+      "kniha": "2622",
+      "farnost": "Horní Bojanovice",
+      "popis": "FRONTA #6 (GEN 7–8): Narození a Oddaní Horní Bojanovice 1800–1835 (pro P182 Pavla Půčka, P183 Terezii Damborskou a 8. gen.)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2622",
+      "od_snimku": 1,
+      "do_snimku": 220,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2623_hbojanovice_z_1800_1835",
+      "kniha": "2623",
+      "farnost": "Horní Bojanovice",
+      "popis": "FRONTA #6 (GEN 7–8): Zemřelí Horní Bojanovice 1800–1835 (rod Půček & Damborský)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2623",
+      "od_snimku": 1,
+      "do_snimku": 120,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5189_cejkovice_poddvorov_1813_1858",
+      "kniha": "5189",
+      "farnost": "Čejkovice (Starý & Nový Poddvorov)",
+      "popis": "FRONTA #6 (GEN 8): N & O Starý/Nový Poddvorov 1813–1858 (přímé odkazy z indexu k5197: 1822 Stawek, 1835 Wlk Paul pag. 50 pro rodiče P172×P173)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/4937",
+      "od_snimku": 1,
+      "do_snimku": 240,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5188_cejkovice_poddvorov_1798_1812",
+      "kniha": "5188",
+      "farnost": "Čejkovice (Starý & Nový Poddvorov)",
+      "popis": "FRONTA #6 (GEN 8–9): N & O Starý/Nový Poddvorov 1798–1812",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/4936",
+      "od_snimku": 1,
+      "do_snimku": 180,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5180_cejkovice_no_1798_1812",
+      "kniha": "5180",
+      "farnost": "Čejkovice",
+      "popis": "FRONTA #6 (GEN 8–9): N & O Čejkovice 1798–1812 (předchází k5181, pro narození Václava Stávka & Pavla Vlka)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/4932",
+      "od_snimku": 1,
+      "do_snimku": 180,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2733_klobouky_n_1819_1837",
+      "kniha": "2733",
+      "farnost": "Klobouky u Brna",
+      "popis": "FRONTA #6 (GEN 7–8): Narození Klobouky u Brna 1819–1837 (pro rodiny z k2752: Forejtník, Veselý, Halm, Dobrovolný, Tihlařík, Vystoupil)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2743",
+      "od_snimku": 1,
+      "do_snimku": 240,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2732_klobouky_n_1803_1822",
+      "kniha": "2732",
+      "farnost": "Klobouky u Brna",
+      "popis": "FRONTA #6 (GEN 8): Narození Klobouky u Brna 1803–1822 (navazuje na sňatky k2752)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2742",
+      "od_snimku": 1,
+      "do_snimku": 220,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2731_klobouky_n_1789_1803",
+      "kniha": "2731",
+      "farnost": "Klobouky u Brna",
+      "popis": "FRONTA #6 (GEN 8–9): Narození Klobouky u Brna 1789–1803",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2741",
+      "od_snimku": 1,
+      "do_snimku": 200,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "2740_klobouky_krumvir_n_1848_1904",
+      "kniha": "2740",
+      "farnost": "Klobouky u Brna (Krumvíř / okolní obce)",
+      "popis": "FRONTA #6 (GEN 7–8): Narození 1848–1904 (kontrola Krumvíř / Halm / Dobrovolný / Veselý)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/206",
+      "od_snimku": 1,
+      "do_snimku": 240,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
     }
   ]
 }
