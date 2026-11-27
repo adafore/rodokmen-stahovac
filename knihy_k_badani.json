@@ -669,9 +669,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2623",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 51,
+      "aktualni_snimek": 64,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5189_cejkovice_poddvorov_1813_1858",
@@ -681,7 +681,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4937",
       "od_snimku": 1,
       "do_snimku": 240,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 36,
       "detail": true,
       "hotovo": false
     },
