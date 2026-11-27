@@ -633,9 +633,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2985",
       "od_snimku": 1,
       "do_snimku": 100,
-      "aktualni_snimek": 10,
+      "aktualni_snimek": 43,
       "detail": false,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3063_nemcicky_idx_z_1859_1949",
@@ -645,7 +645,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2987",
       "od_snimku": 1,
       "do_snimku": 100,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 26,
       "detail": false,
       "hotovo": false
     },
