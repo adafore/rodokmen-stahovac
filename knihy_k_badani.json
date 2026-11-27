@@ -645,9 +645,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2987",
       "od_snimku": 1,
       "do_snimku": 100,
-      "aktualni_snimek": 26,
+      "aktualni_snimek": 46,
       "detail": false,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2622_hbojanovice_no_1800_1835",
@@ -657,7 +657,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2622",
       "od_snimku": 1,
       "do_snimku": 220,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 30,
       "detail": true,
       "hotovo": false
     },
