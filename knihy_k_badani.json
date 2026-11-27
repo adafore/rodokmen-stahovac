@@ -621,9 +621,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2984",
       "od_snimku": 1,
       "do_snimku": 140,
-      "aktualni_snimek": 51,
+      "aktualni_snimek": 100,
       "detail": false,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3061_nemcicky_idx_n_1835_1869",
@@ -633,7 +633,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2985",
       "od_snimku": 1,
       "do_snimku": 100,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 10,
       "detail": false,
       "hotovo": false
     },
