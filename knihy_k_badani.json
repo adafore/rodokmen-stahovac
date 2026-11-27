@@ -609,9 +609,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2982",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 95,
+      "aktualni_snimek": 102,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3060_nemcicky_idx_1785_1949",
@@ -621,7 +621,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2984",
       "od_snimku": 1,
       "do_snimku": 140,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 51,
       "detail": false,
       "hotovo": false
     },
