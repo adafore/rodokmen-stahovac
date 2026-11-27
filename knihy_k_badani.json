@@ -597,9 +597,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2625?image=216000010-000253-003370-000000-002624-000000-00-B01420-00230.jp2",
       "od_snimku": 23,
       "do_snimku": 26,
-      "aktualni_snimek": 23,
+      "aktualni_snimek": 27,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3058_nemcicky_u_1859_1919",
@@ -609,7 +609,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2982",
       "od_snimku": 1,
       "do_snimku": 120,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 45,
       "detail": true,
       "hotovo": false
     },
