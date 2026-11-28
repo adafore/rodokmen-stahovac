@@ -693,9 +693,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4936",
       "od_snimku": 1,
       "do_snimku": 180,
-      "aktualni_snimek": 79,
+      "aktualni_snimek": 90,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5180_cejkovice_no_1798_1812",
@@ -705,7 +705,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4932",
       "od_snimku": 1,
       "do_snimku": 180,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 37,
       "detail": true,
       "hotovo": false
     },
