@@ -756,6 +756,18 @@
       "aktualni_snimek": 78,
       "detail": true,
       "hotovo": true
+    },
+    {
+      "id": "3053_synology_test_68_70",
+      "kniha": "3053",
+      "farnost": "Němčičky",
+      "popis": "TEST SYNOLOGY (3 snímky): Ověření běhu Chromium + GitHub uploadu na Synology (sn. 68–70)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2978?image=216000010-000253-003370-000000-003053-000000-FM-B09377-00680.jp2",
+      "od_snimku": 68,
+      "do_snimku": 70,
+      "aktualni_snimek": 68,
+      "detail": true,
+      "hotovo": false
     }
   ]
 }
