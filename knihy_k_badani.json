@@ -765,9 +765,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2978?image=216000010-000253-003370-000000-003053-000000-FM-B09377-00680.jp2",
       "od_snimku": 68,
       "do_snimku": 70,
-      "aktualni_snimek": 68,
+      "aktualni_snimek": 71,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     }
   ]
 }
