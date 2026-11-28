@@ -705,9 +705,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/4932",
       "od_snimku": 1,
       "do_snimku": 180,
-      "aktualni_snimek": 130,
+      "aktualni_snimek": 174,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2733_klobouky_n_1819_1837",
@@ -717,7 +717,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2743",
       "od_snimku": 1,
       "do_snimku": 240,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 2,
       "detail": true,
       "hotovo": false
     },
