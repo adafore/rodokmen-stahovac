@@ -816,6 +816,42 @@
       "aktualni_snimek": 5,
       "detail": true,
       "hotovo": true
+    },
+    {
+      "id": "3054_hd_sn118_komarek",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #7 PRIORITA 1 (GEN 7): HD sn. 118 — narození P124 Františka Komárka st. 25. 9. 1867 (rodiče P140 Šebestiána Komárka & P141 Salomeny Jeřábkové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01180.jp2",
+      "od_snimku": 118,
+      "do_snimku": 118,
+      "aktualni_snimek": 118,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "5192a_hd_sn032_stavek",
+      "kniha": "5192a",
+      "farnost": "Čejkovice",
+      "popis": "FRONTA #7 PRIORITA 2 (GEN 7): HD sn. 32 — sňatek P172 Bartoloměje Stávka × P173 Mariany Vlkové 9. 11. 1852",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/9323?image=216000010-000253-003372-000000-05192a-000000-AP-B11315-00320.jp2",
+      "od_snimku": 32,
+      "do_snimku": 32,
+      "aktualni_snimek": 32,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3054_nemcicky_n_1835_1869_hd",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "FRONTA #7 (KROK 2+3): Kompletní HD přestažení Narození Němčičky 1835–1869 (kvalita Gen 5 + sourozenci všech němečických rodin)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979",
+      "od_snimku": 1,
+      "do_snimku": 145,
+      "aktualni_snimek": 1,
+      "detail": true,
+      "hotovo": false
     }
   ]
 }
