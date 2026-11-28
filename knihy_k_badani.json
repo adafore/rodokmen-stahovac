@@ -741,9 +741,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2741",
       "od_snimku": 1,
       "do_snimku": 200,
-      "aktualni_snimek": 39,
+      "aktualni_snimek": 78,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "2740_klobouky_krumvir_n_1848_1904",
@@ -753,7 +753,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/206",
       "od_snimku": 1,
       "do_snimku": 240,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 4,
       "detail": true,
       "hotovo": false
     }
