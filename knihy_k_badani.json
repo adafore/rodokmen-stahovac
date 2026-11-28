@@ -777,9 +777,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01160.jp2",
       "od_snimku": 116,
       "do_snimku": 116,
-      "aktualni_snimek": 116,
+      "aktualni_snimek": 117,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3054_hd_sn096_pesta",
@@ -789,9 +789,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-00960.jp2",
       "od_snimku": 96,
       "do_snimku": 96,
-      "aktualni_snimek": 96,
+      "aktualni_snimek": 97,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3054_hd_sn110_benda",
@@ -801,9 +801,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01100.jp2",
       "od_snimku": 110,
       "do_snimku": 110,
-      "aktualni_snimek": 110,
+      "aktualni_snimek": 111,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3054_hd_sn004_slancar",
@@ -813,9 +813,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-00040.jp2",
       "od_snimku": 4,
       "do_snimku": 4,
-      "aktualni_snimek": 4,
+      "aktualni_snimek": 5,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     }
   ]
 }
