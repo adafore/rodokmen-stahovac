@@ -825,9 +825,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01180.jp2",
       "od_snimku": 118,
       "do_snimku": 118,
-      "aktualni_snimek": 118,
+      "aktualni_snimek": 119,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "5192a_hd_sn032_stavek",
@@ -837,9 +837,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/9323?image=216000010-000253-003372-000000-05192a-000000-AP-B11315-00320.jp2",
       "od_snimku": 32,
       "do_snimku": 32,
-      "aktualni_snimek": 32,
+      "aktualni_snimek": 33,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     },
     {
       "id": "3054_nemcicky_n_1835_1869_hd",
@@ -849,7 +849,7 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979",
       "od_snimku": 1,
       "do_snimku": 145,
-      "aktualni_snimek": 1,
+      "aktualni_snimek": 61,
       "detail": true,
       "hotovo": false
     }
