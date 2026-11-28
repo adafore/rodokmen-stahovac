@@ -768,6 +768,54 @@
       "aktualni_snimek": 71,
       "detail": true,
       "hotovo": true
+    },
+    {
+      "id": "3054_hd_sn116_komarek",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "HD SNIPER (GEN 7): Narození Františka Komárka 28. 3. 1867 (rodiče P140 Šebestiána Komárka & P141 Salomeny Jeřábkové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01160.jp2",
+      "od_snimku": 116,
+      "do_snimku": 116,
+      "aktualni_snimek": 116,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3054_hd_sn096_pesta",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "HD SNIPER (GEN 7): Narození Anny Koláčkové 22. 7. 1861 (matka P175 Johany Peštové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-00960.jp2",
+      "od_snimku": 96,
+      "do_snimku": 96,
+      "aktualni_snimek": 96,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3054_hd_sn110_benda",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "HD SNIPER (GEN 7): Narození Anny Bendové 18. 7. 1865 (prarodiče P134 Františka Bendy & P135 Marie Poláškové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-01100.jp2",
+      "od_snimku": 110,
+      "do_snimku": 110,
+      "aktualni_snimek": 110,
+      "detail": true,
+      "hotovo": false
+    },
+    {
+      "id": "3054_hd_sn004_slancar",
+      "kniha": "3054",
+      "farnost": "Němčičky",
+      "popis": "HD SNIPER (GEN 7): Narození Františka Šlancara 1835 čp. 129 (matka P179 Františky Procházkové)",
+      "url": "https://www.mza.cz/actapublica/matrika/detail/2979?image=216000010-000253-003370-000000-003054-000000-FM-B09378-00040.jp2",
+      "od_snimku": 4,
+      "do_snimku": 4,
+      "aktualni_snimek": 4,
+      "detail": true,
+      "hotovo": false
     }
   ]
 }
