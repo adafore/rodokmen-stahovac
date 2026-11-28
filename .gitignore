@@ -1,6 +1,8 @@
 .venv/
 profil_prohlizece/
 skeny/
+data/
+.env
 __pycache__/
 *.pyc
 *.zip

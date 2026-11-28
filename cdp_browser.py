@@ -10,8 +10,10 @@ import base64
 import json
 import os
 import pathlib
+import shutil
 import socket
 import subprocess
+import sys
 import time
 import urllib.request
 
@@ -19,6 +21,19 @@ import websocket
 
 
 def najdi_chrome() -> str:
+    env_bin = os.environ.get("CHROME_BIN", "").strip()
+    if env_bin and pathlib.Path(env_bin).exists():
+        return env_bin
+
+    if not sys.platform.startswith("win"):
+        for nazev in ("chromium", "chromium-browser", "google-chrome", "google-chrome-stable"):
+            nalezeno = shutil.which(nazev)
+            if nalezeno:
+                return nalezeno
+        for cesta in ("/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome"):
+            if pathlib.Path(cesta).exists():
+                return cesta
+
     kandidati = [
         r"C:\Program Files\Google\Chrome\Application\chrome.exe",
         r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
@@ -29,7 +44,7 @@ def najdi_chrome() -> str:
     for p in kandidati:
         if p and pathlib.Path(p).exists():
             return p
-    raise RuntimeError("Nenalezen Google Chrome ani Microsoft Edge.")
+    raise RuntimeError("Nenalezen Google Chrome, Chromium ani Microsoft Edge.")
 
 
 def _volny_port() -> int:
@@ -61,8 +76,18 @@ class CDPBrowser:
             "--no-default-browser-check",
             "--disable-background-networking",
             "--disable-features=TranslateUI",
-            "about:blank",
         ]
+        if sys.platform.startswith("linux"):
+            args.extend([
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+            ])
+        if os.environ.get("CHROME_HEADLESS", "").strip() == "1" or (
+            sys.platform.startswith("linux") and not os.environ.get("DISPLAY")
+        ):
+            args.append("--headless=new")
+        args.append("about:blank")
         self.proc = subprocess.Popen(
             args,
             stdout=subprocess.DEVNULL,

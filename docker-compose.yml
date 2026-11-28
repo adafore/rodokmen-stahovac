@@ -1,0 +1,15 @@
+services:
+  rodokmen-stahovac:
+    build: .
+    container_name: rodokmen-stahovac
+    hostname: synology-nas
+    restart: unless-stopped
+    shm_size: "1gb"
+    environment:
+      TZ: Europe/Prague
+      GH_TOKEN: ${GH_TOKEN}
+      ENABLE_NOVNC: "1"
+    ports:
+      - "6080:6080"
+    volumes:
+      - ./data:/data
