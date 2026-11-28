@@ -849,9 +849,9 @@
       "url": "https://www.mza.cz/actapublica/matrika/detail/2979",
       "od_snimku": 1,
       "do_snimku": 145,
-      "aktualni_snimek": 124,
+      "aktualni_snimek": 133,
       "detail": true,
-      "hotovo": false
+      "hotovo": true
     }
   ]
 }
